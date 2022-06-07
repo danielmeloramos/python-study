@@ -1,46 +1,17 @@
-class ExampleName:
-    """Classe de exemplo"""
-
-    def __init__(self, value):
-        self.value = value
-
-    def get_value(self):
-        return self.value
-
-
 class Calculadora:
-    """Calculadora
 
-    Calculadora que recebe dois valores e realiza as operações:
-    soma, subtração, multiplicação e divisão
-    """
+    def __init__(self, first_value, second_value):
+        self.first_value = first_value
+        self.second_value = second_value
 
-    def __init__(self, value_1, value_2):
-        self.value_1 = value_1
-        self.value_2 = value_2
+    def sum(self):
+        return self.first_value + self.second_value
 
-    def soma(self):
-        return self.value_1 + self.value_2
+    def subtraction(self):
+        return self.first_value - self.second_value
 
-    def subtracao(self):
-        return self.value_1 - self.value_2
+    def multiplication(self):
+        return self.first_value * self.second_value
 
-    def multiplicacao(self):
-        return self.value_1 * self.value_2
-
-    def divisao(self):
-        return self.value_1 / self.value_2
-
-
-class CalculadoraCientifica(Calculadora):
-    """Calculadora Cientifica
-
-    Calculadora que recebe dois valores e realiza as operações:
-    soma, subtração, multiplicação, divisão, exponenciação e resto
-    """
-
-    def exponenciacao(self):
-        return self.value_1 ** self.value_2
-
-    def resto(self):
-        return self.value_1 % self.value_2
+    def division(self):
+        return self.first_value / self.second_value
