@@ -11,7 +11,7 @@ class Calculadora:
         return self.first_value - self.second_value
 
     def multiplication(self):
-        return self.first_value ** self.second_value
+        return self.first_value * self.second_value
 
     def division(self):
         return self.first_value / self.second_value
