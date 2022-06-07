@@ -18,6 +18,7 @@ def error(err):
 def calc(value):
     try:
         value = int(value)
+        import ipdb; ipdb.set_trace()
     except ValueError as err:
         return error(err)
 
