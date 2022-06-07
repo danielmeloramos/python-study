@@ -1,0 +1,13 @@
+<!-- Template base que pode ser herdado por outros templates -->
+<!DOCTYPE html>
+
+<!-- Adicionando uma possibilidade de estender a tag `title` -->
+<title>{% block title %}{% endblock %}</title>
+
+<!-- Importando os estilos definidos no arquivo static/style.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+<section class="content">
+  <!-- Adicionando um bloco com a possibilidade de estender nos templates com o nome de `content` -->
+  {% block content %}{% endblock %}
+</section>

@@ -1,0 +1,14 @@
+<!-- Template base para o feed e o registro de noticias -->
+<!DOCTYPE html>
+
+<title>
+  {% block title %}{% endblock %}
+</title>
+
+<!-- Importa os estilos definidos no arquivo static/style.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+<section class="content">
+  <!-- Adicionando um bloco com a possibilidade de estender nos templates com o nome de `content` -->
+  {% block content %}{% endblock %}
+</section>

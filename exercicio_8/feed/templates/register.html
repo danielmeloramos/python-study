@@ -1,0 +1,31 @@
+<!-- Template para cadastrar uma noticia -->
+
+<!-- Herdando o template base -->
+{% extends 'base.html' %}
+
+<!-- Estendendo o bloco `content` com o html abaixo -->
+{% block content %}
+
+
+<!-- Monta um formulário com os campos e um botão de Cadastrar, envia as informações do formulário para a rota atual com o metódo POST -->
+<h1> Cadastre uma noticia </h1>
+
+<form class="form-container" method="post" action="">
+    <label for="author">Autor</label>
+    <input class="form-field" name="author" id="author" required>
+
+    <label for="title">Titulo</label>
+    <input class="form-field" type="title" name="title" id="title" required>
+
+    <label for="description">Descrição</label>
+    <input class="form-field" type="description" name="description" id="description" required multiple>
+
+    <label for="urlToImage">Url da imagem</label>
+    <input class="form-field" type="urlToImage" name="urlToImage" id="urlToImage" required>
+
+    <label for="url">Url da notícia</label>
+    <input class="form-field" type="url" name="url" id="url" required>
+
+    <input class="form-field" type="submit" value="Cadastrar">
+</form>
+{% endblock %}

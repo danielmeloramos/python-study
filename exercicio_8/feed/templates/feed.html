@@ -1,0 +1,26 @@
+<!-- Template para exibir o feed de noticias -->
+
+<!-- Herdando o template base -->
+{% extends 'base.html' %}
+
+<!-- Estendendo o bloco `content` com o html abaixo -->
+{% block content %}
+<h1>Feed de Notícias</h1>
+<div class="grid-container">
+  <!-- Recebe a variável `feeds` que é uma lista e percorre todos os items montando uma caixinha de noticia para cada -->
+  {% for feed in feeds %}
+  <div class="news">
+    <div class="image-container">
+      <img class="image" src="{{ feed.urlToImage }}" />
+    </div>
+    <div>
+      <h3 class="title">
+        <a href="{{ feed.url }}">{{ feed.title }} </a>
+      </h3>
+      <p class="author">{{ feed.author }}</p>
+      <p class="description">{{ feed.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

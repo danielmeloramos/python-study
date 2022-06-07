@@ -1,0 +1,45 @@
+/* Estilos */
+
+body {
+  background-color: #eee;
+  padding: 50px;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px 20px;
+  grid-template-areas: ". ." ". ." ". .";
+}
+
+.image {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.image-container {
+  display: block;
+  align-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 250px;
+}
+
+.news {
+  border: 1px solid;
+  display: flex;
+  justify-content: start;
+  background-color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  height: 50px;
+}
