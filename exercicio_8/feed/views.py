@@ -36,15 +36,16 @@ def feed():
     # TODO: Tente utilizar o ipdb para descobrir como acessar os itens das notícias (Dica: dir(response))
 
     # TODO: Troque os dados pelo que vem da API
-    feeds = [
-        {
-            "author": "author",
-            "title": "titulo",
-            "description": "descrição",
-            "url": "url da noticia",
-            "urlToImage": "url da imagem",
-        }
-    ]
+    feeds = response.json()["items"]
+    #feeds = [
+    #    {
+    #       "author": "author",
+    #        "title": "titulo",
+    #        "description": "descrição",
+    #        "url": "url da noticia",
+    #        "urlToImage": "url da imagem",
+    #    }
+    #]
     return render_template("feed.html", feeds=feeds)
 
 
@@ -54,7 +55,10 @@ def register():
     if request.method == "POST":
         data = {
             "author": request.form["author"],
-            # TODO: Complete com os outros
+            "title": request.form["title"],
+            "description": request.form["description"],
+            "urlToImage": request.form["urlToImage"],
+            "url": request.form["url"]
         }
 
         # Envia a notícia para a API
@@ -66,4 +70,4 @@ def register():
         return redirect(url_for("feed"))
 
     # TODO: Substitua para renderizar a página de formulário
-    return "hello, world"
+    return render_template("register.html")
