@@ -1,11 +1,8 @@
-<!-- Herdando o template base -->
 {% extends 'base.html' %}
 
-<!-- Estendendo o bloco `content` com o html abaixo -->
 {% block content %}
-<h1>Titulo</h1>
+<h1>Nome</h1>
 <div>
   <p class="content">{{ content }}</p>
-  <!-- `content` é uma variável passada para o template -->
 </div>
 {% endblock %}
